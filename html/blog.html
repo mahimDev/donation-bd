@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,100&display=swap"
+      rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="../assets/coin.png" type="image/x-icon" />
+    <title>Donation Blog</title>
+  </head>
+  <body class="container mx-auto">
+    <header
+      class="bg-opacity-20 backdrop-blur-2xl bg-gradient-to-r from-[#dce35b2f] to-[#45b64943]">
+      <!-- <a href="../index.html" class="btn"> Home </a> -->
+      <div class="flex justify-around items-center py-8">
+        <a
+          href="../index.html"
+          class="btn bg-[#55a630] hover:bg-[#80b918] md:text-2xl text-white border-0 px-7 py-2"
+          >Home</a
+        >
+        <div class="flex items-center gap-3">
+          <img class="w-10" src="../assets/logo.png" alt="" />
+          <h1 class="md:text-3xl font-bold">Donate Bangladesh</h1>
+        </div>
+        <div class="flex items-center text-center gap-1">
+          <img class="w-6 h-6" src="../assets/coin.png" alt="" />
+          <p class="md:text-2xl font-bold">
+            <span id="previous-balance">10000</span> BDT
+          </p>
+        </div>
+      </div>
+    </header>
+    <div class="flex items-center mx-5">
+      <h1 class="md:text-5xl text-2xl font-bold my-10">Important FAQ</h1>
+      <img class="w-28" src="../assets/icons8-about-400.png" alt="" />
+    </div>
+    <main class="mx-5">
+      <div class="collapse collapse-arrow bg-[#e6f1d1]">
+        <input type="radio" name="my-accordion-2" checked="checked" />
+        <div class="collapse-title text-2xl font-medium my-7">
+          What is the web site ?
+        </div>
+        <div class="collapse-content">
+          <p>
+            A website is a collection of web pages accessed via the internet
+            through a browser, typically under one domain name.
+          </p>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow bg-[#81b9186f]">
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-2xl font-medium my-7">
+          What is the javaScript ?
+        </div>
+        <div class="collapse-content">
+          <p>
+            JavaScript is a programming language used to make web pages
+            interactive, enabling dynamic content, animations, and user-driven
+            functionality in websites.
+          </p>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow bg-[#e6f1d1]">
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-2xl font-medium my-7">
+          what is the dom
+        </div>
+        <div class="collapse-content">
+          <p>
+            The DOM (Document Object Model) is a programming interface for web
+            documents. It represents the structure of a webpage as a tree of
+            objects (nodes), allowing JavaScript to access, manipulate, and
+            update the content, structure, and styles of the website
+            dynamically.
+          </p>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow bg-[#81b9186f]">
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-2xl font-medium my-7">
+          Why people use website ?
+        </div>
+        <div class="collapse-content">
+          <p>
+
+People use websites to access information, communicate, shop, and entertain themselves. Websites provide convenient, on-demand services and resources from anywhere with internet access.
+          </p>
+        </div>
+      </div>
+     
+      </div>
+    </main>
+  </body>
+</html>
