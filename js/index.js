@@ -3,10 +3,10 @@ document
   .addEventListener("click", function () {
     document
       .getElementById("donation-section-btn")
-      .classList.add(`bg-[#55a630]`);
+      .classList.add(`bg-[#80b918]`);
     document
       .getElementById("history-section-btn")
-      .classList.remove(`bg-[#55a630]`);
+      .classList.remove(`bg-[#80b918]`);
 
     showsection("donadet-card-container");
   });
@@ -15,10 +15,10 @@ document
   .addEventListener("click", function () {
     document
       .getElementById("history-section-btn")
-      .classList.add(`bg-[#55a630]`);
+      .classList.add(`bg-[#80b918]`);
     document
       .getElementById("donation-section-btn")
-      .classList.remove(`bg-[#55a630]`);
+      .classList.remove(`bg-[#80b918]`);
 
     showsection("history-container");
   });
