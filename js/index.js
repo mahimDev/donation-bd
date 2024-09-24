@@ -94,11 +94,11 @@ function calculationTheHandle(
   const donatedPre = donatedPrevious(donatedPrev);
   const input = inputValue(donationInputValu);
   if (isNaN(input) || input <= 0) {
-    alert(`Invalid doneted`);
+    alert(`Your donation is incorrect`);
     return;
   }
   if (previousBalance < input) {
-    return alert(`sorry ${input} this is unpossible amount`);
+    return alert(`sorry your account does not have a balance of ${input}`);
   }
   // alert("done com");
   // document.getElementById("my_modal_1").showModal();
@@ -108,16 +108,19 @@ function calculationTheHandle(
   document.getElementById(previousBal).innerText = previousBalance - input;
 
   //  history work
+
   const donatedHead = document.getElementById(donatedHeading).innerText;
   const history = document.getElementById("history-container");
-  console.log(history);
+  // console.log(history);
   const createHistory = document.createElement("div");
-  createHistory.className = `  py-5 pl-7 rounded-md shadow-md my-5 bg-[#e6f1d1] `;
+
+  createHistory.className = `  py-5  rounded-md shadow-md my-5 bg-[#e6f1d1] `;
   createHistory.innerHTML = `
-<h1 class="font-semibold text-xl mb-3">
+<h1 class="font-semibold text-xl mb-3  mx-4">
   ${input} Taka is ${donatedHead}
  </h1>
-  <p>${new Date()}</p>      
+  <p class="bg-[#e0ddb3] py-2 px-4 mx-4 rounded">Date:${new Date()} </p>      
+        
 `;
 
   // const textHistoryNode = document.createTextNode("History");
