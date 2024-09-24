@@ -73,7 +73,7 @@ function calculationTheHandle(
   const previousBalance = donatedPrevious(previousBal);
   const donatedPre = donatedPrevious(donatedPrev);
   const input = inputValue(donationInputValu);
-
+  // console.log(input);
   if (isNaN(input) || input <= 0) {
     alert(`Your donation is incorrect`);
     return;
@@ -107,9 +107,16 @@ function calculationTheHandle(
 }
 function inputValue(id) {
   const inpValue = document.getElementById(id).value;
-  const parseValue = parseFloat(inpValue);
 
-  return parseValue;
+  let hasLetters = /[a-zA-Z]/.test(inpValue);
+  if (hasLetters) {
+    alert(`${inpValue} Your donation is incorrect`);
+    return;
+  } else {
+    const parseValue = parseFloat(inpValue);
+    console.log(parseValue);
+    return parseValue;
+  }
 }
 
 function donatedPrevious(id) {
