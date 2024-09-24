@@ -1,20 +1,3 @@
-// const btn_1 = eventHandle("donation-btn");
-// function eventHandle(id) {
-//   document.getElementById(id).addEventListener("click", function (event) {
-//     event.preventDefault();
-
-//     const previousBalance = donatedPrevious("previous-balance");
-//     const donatedPre = donatedPrevious("donated-previous");
-//     const input = inputValue("donation-input-value");
-
-//     document.getElementById("donated-previous").innerText = input + donatedPre;
-//     document.getElementById("previous-balance").innerText =
-//       previousBalance - input;
-
-//     console.log(previousBalance, donatedPre, input);
-//     console.log(input);
-//   });
-// }
 document
   .getElementById("donation-section-btn")
   .addEventListener("click", function () {
@@ -58,7 +41,6 @@ document
     const balance = "previous-balance";
     const donatedHeading = "donated-Noakhali";
     calculationTheHandle(input, donated, balance, donatedHeading);
-    // console.log(input, donated, balance);
   });
 // card 2
 document
@@ -70,7 +52,6 @@ document
     const balance = "previous-balance";
     const donatedHeading = "donated-feni";
     calculationTheHandle(input, donated, balance, donatedHeading);
-    // console.log(input, donated, balance);
   });
 // card 3
 document
@@ -82,7 +63,6 @@ document
     const balance = "previous-balance";
     const donatedHeading = "quota-Movement";
     calculationTheHandle(input, donated, balance, donatedHeading);
-    // console.log(input, donated, balance);
   });
 function calculationTheHandle(
   donationInputValu,
@@ -93,6 +73,7 @@ function calculationTheHandle(
   const previousBalance = donatedPrevious(previousBal);
   const donatedPre = donatedPrevious(donatedPrev);
   const input = inputValue(donationInputValu);
+
   if (isNaN(input) || input <= 0) {
     alert(`Your donation is incorrect`);
     return;
@@ -100,7 +81,7 @@ function calculationTheHandle(
   if (previousBalance < input) {
     return alert(`sorry your account does not have a balance of ${input}`);
   }
-  // alert("done com");
+
   // document.getElementById("my_modal_1").showModal();
   my_modal_1.showModal();
   // document.getElementById("my_modal_1").close();
@@ -111,7 +92,6 @@ function calculationTheHandle(
 
   const donatedHead = document.getElementById(donatedHeading).innerText;
   const history = document.getElementById("history-container");
-  // console.log(history);
   const createHistory = document.createElement("div");
 
   createHistory.className = `  py-5  rounded-md shadow-md my-5 bg-[#e6f1d1] `;
@@ -123,18 +103,12 @@ function calculationTheHandle(
         
 `;
 
-  // const textHistoryNode = document.createTextNode("History");
-  // history.appendChild(createHistory);
   history.insertBefore(createHistory, history.firstChild);
-  // console.log(history);
 }
 function inputValue(id) {
   const inpValue = document.getElementById(id).value;
   const parseValue = parseFloat(inpValue);
-  // if (isNaN(parseValue)) {
-  //   alert(`"${inpValue}" is no doneted`);
-  //   return;
-  // }
+
   return parseValue;
 }
 
@@ -143,13 +117,3 @@ function donatedPrevious(id) {
   const parseFloatPrevious = parseFloat(donatedPreviousValue);
   return parseFloatPrevious;
 }
-
-// //  history function
-// function showsection(id) {
-//   document.getElementById("history-container").classList.add("hidden");
-//   document.getElementById("donadet-card-container").classList.add("hidden");
-//   // showig
-//   document.getElementById(id).classList.remove("hidden");
-// }
-
-//..............
